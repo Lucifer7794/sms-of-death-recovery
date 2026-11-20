@@ -29,8 +29,7 @@ Its behaviour was reviewed from source. Handset recovery remains unverified.
 
 2. PREPARE THE WINDOWS PC AND ANDROID PHONE
 
-   Extract the repository ZIP. Open the recovery folder in the extracted
-   files. On the phone, enable Developer options and USB debugging.
+   Extract the repository ZIP. Open the folder containing FixSmsOfDeath.bat. On the phone, enable Developer options and USB debugging.
    On many phones, tapping Build number seven times enables Developer
    options. Use the instructions for your model if its menu differs.
 
@@ -46,7 +45,7 @@ Its behaviour was reviewed from source. Handset recovery remains unverified.
    The script does not check a published digest for that download. You may
    install Google's Platform-Tools yourself and add them to PATH first.
 
-   Run FixSmsOfDeath.bat from the extracted recovery folder. It displays
+   Run FixSmsOfDeath.bat from the extracted folder. It displays
    the detected serial number. Check that it belongs to the intended phone.
    At the confirmation prompt, pressing Enter without typing cancels.
    Type uppercase YES only if you choose to erase the provider data.

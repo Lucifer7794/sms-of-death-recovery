@@ -1,6 +1,6 @@
 # Preserve the published hashes across checkouts on Windows, macOS and Linux.
 *.bat -text
-recovery/README.txt -text
+README.txt -text
 *.md text eol=lf
 SHA256SUMS text eol=lf
 *.pdf binary

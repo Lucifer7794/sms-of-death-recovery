@@ -1,10 +1,10 @@
-![SMS of Death — Android telephony recovery for CVE-2026-58882, by Shubham Chatterjee](assets/cover.jpg)
+![SMS of Death — Android telephony recovery for CVE-2026-58882, by Shubham Chatterjee](cover.jpg)
 
 # Android telephony recovery for CVE-2026-58882
 
 A call can drop before a message ever appears in the inbox. Android’s “SMS of Death” vulnerability can interrupt the phone service while it processes an incoming message. This repository contains my research report and a Windows utility for last-resort recovery.
 
-**[Read the research report (PDF)](docs/research-report.pdf)** · **[Open the Windows recovery guide](recovery/README.txt)** · **[Inspect the script](recovery/FixSmsOfDeath.bat)**
+**[Read the research report (PDF)](research-report.pdf)** · **[Open the Windows recovery guide](README.txt)** · **[Inspect the script](FixSmsOfDeath.bat)**
 
 > [!CAUTION]
 > **The recovery utility can erase your SMS and MMS.** It clears the Android telephony provider’s data for user 0. Check that your message backup has completed before considering a reset. The script makes no backup. You can read the entire report and check your patch level without running the utility.
@@ -27,11 +27,11 @@ A call can drop before a message ever appears in the inbox. Android’s “SMS o
 3. **Waits for an explicit choice.** Typing uppercase `YES` authorises clearing the telephony provider for Android user 0. Press Enter at the empty prompt to cancel. Expect stored SMS and MMS to be lost. Effects on call history and settings vary by device.
 4. **Leaves verification to you.** After a completed reset, restart the phone manually and check signal, an ordinary call and a text. If service still fails, contact support before attempting another reset. The manufacturer’s security update supplies the underlying fix.
 
-The script was reviewed as text. Recovery on a physical handset and backup restoration remain unverified. [Step-by-step instructions and troubleshooting](recovery/README.txt)
+The script was reviewed as text. Recovery on a physical handset and backup restoration remain unverified. [Step-by-step instructions and troubleshooting](README.txt)
 
 ## Inside the report
 
-[![Two excerpts from the report. Page 5 compares Android patch coverage and page 8 gives the recovery procedure.](assets/report-preview.png)](docs/research-report.pdf)
+[![Two excerpts from the report. Page 5 compares Android patch coverage and page 8 gives the recovery procedure.](report-preview.png)](research-report.pdf)
 
 | Pages | What you’ll find |
 | --- | --- |
@@ -49,5 +49,5 @@ The 13 November 2026 report reviews the original utility. For this public editio
 To check the script on Windows, open PowerShell in the extracted repository folder and compare the result with its entry in `SHA256SUMS`.
 
 ```powershell
-Get-FileHash .\recovery\FixSmsOfDeath.bat -Algorithm SHA256
+Get-FileHash .\FixSmsOfDeath.bat -Algorithm SHA256
 ```
